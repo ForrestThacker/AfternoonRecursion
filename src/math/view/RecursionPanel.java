@@ -41,7 +41,7 @@ public class RecursionPanel extends JFrame
 	
 	private void setupPanel()
 	{
-		this.setLayout();
+		this.setLayout(baseLayout);
 		this.add(fibonacciButton);
 		this.add(factorialButton);
 		this.add(inputField);
