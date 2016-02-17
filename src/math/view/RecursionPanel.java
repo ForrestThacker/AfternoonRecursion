@@ -1,10 +1,14 @@
 package math.view;
 
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
+
 import math.controller.RecursionController;
 
 
@@ -15,11 +19,11 @@ public class RecursionPanel extends JFrame
 	private JButton factorialButton;
 	private JTextField inputField;
 	private JTextArea resultsArea;
-	private SpringLayout baseLayout;
+	private JTextField baseLayout;
 	
 	public RecursionPanel(RecursionController baseController)
 	{
-		thisbaseController = baseController;
+		this. baseController = baseController;
 		fibonacciButton = new JButton("Calculate the Fbonacci number");
 		factorialButton = new JButton("n!");
 		baseLayout = new JTextField(5);
@@ -30,14 +34,22 @@ public class RecursionPanel extends JFrame
 		
 	}
 	
-	private void setupLayout()
+	private void setLayout()
 	{
 		
 	}
 	
 	private void setupPanel()
 	{
-		
+		this.setLayout();
+		this.add(fibonacciButton);
+		this.add(factorialButton);
+		this.add(inputField);
+		this.add(resultsArea);
+		resultsArea.setWrapStyleWord(true);
+		resultsArea.setLineWrap(true);
+		resultsArea.setEditable(false);
+		this.setBackground(Color.CYAN);
 	}
 	
 	private void setupListeners()	

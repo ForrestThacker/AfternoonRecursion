@@ -23,7 +23,7 @@ public class RecursionController
  
 	public String doFactorial(String input)
 	{
-		calculatedValue = input + "!"
+		calculatedValue = input + "!";
 			Double.toString(mathTool.factorialNumber(Integer.parseInt(input)));
 		return calculatedValue;
 	}
