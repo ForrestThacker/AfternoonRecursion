@@ -2,9 +2,10 @@ package math.view;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
@@ -12,7 +13,7 @@ import javax.swing.SpringLayout;
 import math.controller.RecursionController;
 
 
-public class RecursionPanel extends JFrame
+public class RecursionPanel extends JPanel
 {
 	private RecursionController baseController;
 	private JButton fibonacciButton;
@@ -29,7 +30,7 @@ public class RecursionPanel extends JFrame
 		baseLayout = new JTextField(5);
 		resultsArea = new JTextArea(10, 15);
 		setupPanel();
-		setupLayout();
+		setLayout();
 		setupListeners();
 		
 	}
@@ -41,7 +42,7 @@ public class RecursionPanel extends JFrame
 	
 	private void setupPanel()
 	{
-		this.setLayout(baseLayout);
+		this.setLayout();
 		this.add(fibonacciButton);
 		this.add(factorialButton);
 		this.add(inputField);
